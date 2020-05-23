@@ -9,3 +9,15 @@
 ### Check out our blog at [tensor-programming.com](http://tensor-programming.com/).
 
 ### Our [Twitter](https://twitter.com/TensorProgram), our [facebook](https://www.facebook.com/Tensor-Programming-1197847143611799/) and our [Steemit](https://steemit.com/@tensor).
+
+# purplemass updates May 2020
+
+Thanks to Tensor Programming for their excellent chat app in Rust.
+
+A few tweaks were made to this to make it work across different computers. The only requirement for this is to set an environment variable of the server for the client app like this (tested on macOS):
+
+    export BAM_SERVER_IP="xxx.xxx.xxx.xxx"
+
+where `xxx.xxx.xxx.xxx` is the IP address of the server.
+
+The port used can only be set in the source code and is left unchanged as `6000`.

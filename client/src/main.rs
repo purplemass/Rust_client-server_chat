@@ -21,9 +21,9 @@ fn main() {
         Ok(env_var) => server_address = format!("{}:{}", env_var, SERVER_PORT),
         Err(e) => {
             println!("Error: {}\n", e);
-            println!("Set the variable like this:");
+            println!("Set the required variable like this:\n");
             println!("export {}=\"xxx.xxx.xxx.xxx\"\n", SERVER_IP_KEY);
-            println!("Exiting...");
+            println!("Exiting...\n");
             process::exit(1);
         },
     }
