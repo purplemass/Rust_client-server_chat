@@ -11,11 +11,15 @@ fn sleep() {
 }
 
 fn main() {
+    println!("<><><><><><><><><><><><><><><><><><><><><><>");
+    println!("Starting server on {:?}\n", LOCAL);
+
     let server = TcpListener::bind(LOCAL).expect("Listener failed to bind");
     server.set_nonblocking(true).expect("failed to initialize non-blocking");
 
     let mut clients = vec![];
     let (tx, rx) = mpsc::channel::<String>();
+
     loop {
         if let Ok((mut socket, addr)) = server.accept() {
             println!("Client {} connected", addr);
